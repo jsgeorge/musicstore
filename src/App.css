@@ -1,0 +1,381 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+}
+.margin-top {
+  margin-top: 100px;
+}
+header,
+nav,
+.navbar {
+  margin: 0;
+  padding-bottom: 0;
+  min-height: 150px;
+  background: transparent;
+}
+.navbar2 {
+  min-height: 40px;
+}
+.navbar1 ul li a {
+  font-size: 12px;
+}
+.navbar2 ul li a {
+  font-weight: bold;
+  padding: 7px 20px;
+}
+.navbar2 ul li a:hover {
+  background: red;
+  color: #fff;
+}
+nav,
+.navbar {
+  margin-top: 00px;
+}
+header {
+  /* height: 100px;*/
+  background: transparent;
+  height: 50px;
+  /*padding-top: 30px;
+  padding-bottom: 30px; */
+}
+.pages {
+  padding-top: 20px;
+}
+
+.appFont1 {
+  color: rgb(52, 88, 119);
+}
+.appFont2 {
+  color: rgb(84, 154, 219);
+}
+.bkdBlack {
+  background: #111;
+  color: #fff;
+}
+i {
+  margin-right: 4px;
+}
+.btn {
+  margin-right: 5px;
+}
+.small {
+  font-size: 14px;
+}
+.appBdk1 {
+  background: rgb(52, 88, 119);
+}
+.headerFont {
+  font-size: 14px;
+  font-weight: bold;
+}
+.listingCmds {
+}
+.list-group-item {
+}
+.proj-item {
+}
+.proj-item .left,
+.detail .left {
+  float: left;
+  width: 75%;
+}
+.proj-item .right {
+  font-size: 12px;
+}
+.proj-item .right,
+.detail .right {
+  float: right;
+  width: 22%;
+  margin-right: 5px;
+}
+.proposal {
+  background: blue;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.development {
+  background: orange;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.testing {
+  background: purple;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.production {
+  background: rgb(10, 216, 72);
+  color: #fff;
+  padding: 2px 4px;
+  width: 80px;
+  font-size: 12px;
+  text-align: center;
+}
+.deployment {
+  background: rgb(14, 13, 13);
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.completed {
+  background: green;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.Low {
+  background: green;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.Medium {
+  background: orange;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.High {
+  background: red;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.btnStatus {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.chgStatusPanel {
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+.list-group-item a,
+.list-group-item:hover {
+  color: #111;
+  text-decoration: none;
+}
+.dateTime {
+  font-size: 12px;
+  color: #333;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.btnNew {
+  background: green;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fullWidth {
+  width: 100%;
+}
+.table {
+  clear: left;
+}
+ul.table li {
+  float: left;
+  display: block;
+  font-size: 16px;
+}
+.authForm {
+  max-width: 300px;
+}
+.item-name {
+  width: 30%;
+}
+.home-wrapper {
+  text-align: center;
+}
+.home-wrapper h3 {
+}
+.home-link-wrapper {
+  padding: 10%;
+}
+.home-link-wrapper ul li {
+  margin: 20px auto;
+}
+.home-login {
+  clear: left;
+  width: 100px;
+  text-align: center;
+  background: blue;
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 20px;
+}
+.home-reg {
+  clear: left;
+  width: 100px;
+  text-align: center;
+  background: green;
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 20px;
+}
+.item-email {
+  width: 35%;
+}
+.item-bal {
+  width: 15%;
+  text-align: right;
+}
+.item-clientid {
+  width: 25%;
+}
+.item-txdate {
+  width: 10%;
+}
+.item-tx {
+  width: 10%;
+}
+.item-cmd {
+  width: 20%;
+  text-align: right;
+}
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+.content {
+  float: left;
+  min-width: 400px;
+}
+.sidebar {
+  float: right;
+}
+.nav-link {
+  color: #fff;
+  background: transparent;
+  border: none;
+}
+.user-logo {
+  background: orangered;
+  color: #fff;
+  border-radius: 80px;
+  padding: 12px;
+}
+.sidebar {
+}
+.notify-wrapper {
+  background: #fff;
+  min-height: 100px;
+  padding: 15px;
+}
+.note-item {
+  border: none;
+}
+.note-user {
+  color: red;
+}
+.detail {
+  background: #fff;
+  padding: 20px;
+  min-height: 300px;
+}
+.detail-content {
+  min-height: 200px;
+  clear: left;
+}
+.item {
+  background: #fff;
+  padding: 20px;
+  min-height: 100px;
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .margin-top {
+    margin-top: 50px;
+    background: green;
+    width: 100%;
+  }
+  header,
+  nav,
+  .navbar {
+    min-height: 50px;
+  }
+  header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .content {
+    width: 100%;
+    background: blue;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .proj-item .left h6 {
+    color: blue;
+    font-size: 16px;
+  }
+  .notify-wrapper {
+    padding: 0;
+    padding-top: 10px;
+  }
+  .notify-wrapper h5 {
+    padding-left: 20px;
+    font-size: 18px;
+    color: gray;
+  }
+  .note-item {
+    border: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  ul.navbar-nav mr-auto menu {
+    display: none;
+    clear: left;
+    width: 100%;
+  }
+  .list-group {
+    width: 100%;
+  }
+  .list-group-item {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .navbar-brand {
+    font-size: 18px;
+  }
+}

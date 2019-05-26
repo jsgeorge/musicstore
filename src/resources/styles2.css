@@ -1,0 +1,674 @@
+body {
+  background: #000 url("../resources/images/layout/background.png") no-repeat
+    top center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: arial;
+  color: white;
+}
+.container {
+  background: transparent;
+  margin: 0px auto;
+  width: 985px;
+  padding: 0 50px;
+}
+header {
+  padding-top: 20px;
+  height: 165px;
+}
+.logoDiv {
+  float: left;
+  width: 255px;
+  height: 160px;
+}
+.logo {
+  display: block;
+  background: url("../resources/images/layout/logo.png") no-repeat;
+  width: 250px;
+  height: 140px;
+  margin-left: -35px;
+}
+.top_navigation {
+  float: right;
+  width: 430px;
+  height: 150px;
+}
+.top_navigation div {
+  clear: left;
+  text-align: right;
+  height: 33px;
+  width: 100%;
+}
+#headnav1 {
+}
+ul.topnav1 {
+  text-align: right;
+  margin-left: 180px;
+  width: 150px;
+}
+ul.topnav1 li {
+  border-right: 1px solid #111;
+  float: left;
+}
+ul.topnav1 li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 11px;
+  margin: 2px 6px;
+}
+ul.topnav1 li a:hover {
+  color: red;
+}
+ul.topnav2 {
+  width: 100%;
+}
+ul.topnav2 li {
+  border-right: 1px solid #111;
+  float: left;
+  margin: 10px 0;
+}
+ul.topnav2 li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 11px;
+  margin: 0px 8px;
+}
+ul.topnav2 li a:hover {
+  color: white;
+}
+.topnavSel {
+  color: white;
+}
+.fontRed {
+  color: red;
+}
+#currencyForm {
+  font-size: 11px;
+  color: #ccc;
+}
+.cboCurrencies {
+  background: #222;
+  width: 90px;
+  font-size: 11px;
+  color: #ccc;
+  border: none;
+  height: 20px;
+}
+.btnCur {
+  color: white;
+  padding: 5px 0;
+  font-size: 9px;
+  margin-top: -5px;
+  background: url("../resources/images/layout/curBtn.png") no-repeat;
+  border: none;
+  float: right;
+  width: 22px;
+}
+.shopcart {
+  background: url("../resources/images/layout/cart.png") no-repeat right top;
+  padding-top: 0px;
+  height: 15px;
+  width: 220px;
+  color: gray;
+  float: right;
+}
+.shopcart a {
+  color: red;
+  text-decoration: none;
+}
+.shopcart a:hover {
+  color: white;
+  text-decoration: none;
+}
+.btnShowCart {
+  background: url("../resources/images/layout/cartbtn.png") no-repeat;
+  color: #fff;
+  padding: 5px 3px;
+  border: none;
+  display: block;
+}
+#srchForm {
+  background: url("../resources/images/layout/srchform.png") no-repeat left top;
+  width: 395px;
+  height: 55px;
+  padding: 10px 5px;
+  float: right;
+}
+.srchFont {
+  color: white;
+  font-family: "Gill Sans Ultra Bold Condensed";
+  font-size: 24px;
+}
+#srchForm #srchText {
+  color: red;
+  background: url("../resources/images/layout/srchText.png");
+  width: 230px;
+  height: 30px;
+  text-indent: 10px;
+  border: none;
+}
+#srchForm #srchBtn {
+  background: url("../resources/images/layout/srchbtn.png");
+  width: 25px;
+  border: none;
+  margin-right: 15px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  clear: left;
+  background: url("../resources/images/layout/nav.png") no-repeat;
+  display: block;
+  height: 50px;
+  overflow: hidden;
+}
+nav ul li {
+  border-right: 1px solid #000;
+  float: left;
+  margin-top: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+}
+nav ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: url("../resources/images/layout/nav_hov.png") repeat-x;
+}
+.navSel {
+  color: white;
+  text-decoration: none;
+  background: url("../resources/images/layout/nav_hov.png") repeat-x;
+}
+.menu_mobile {
+  display: none;
+}
+.mobilenav_head {
+  display: none;
+}
+mobilenav {
+  display: none;
+}
+.page_content {
+  clear: left;
+  background: #fff url("../resources/images/layout/wrapper.png") repeat-x;
+
+  min-height: 400px;
+}
+.baner {
+  height: 400px;
+  clear: left;
+}
+.jumbotron {
+  background: url("../resources/images/banner/img2.png") no-repeat;
+  background-size: cover !important;
+}
+.highlight_wrapper {
+  height: 500px;
+}
+.product-wrapper {
+  padding: 30px;
+}
+.proj-item-feat {
+  width: 25%;
+  height: 250px;
+  float: left;
+  background: transparent;
+
+  padding: 15px;
+}
+.proj-item-feat div {
+  width: 100%;
+  height: 200px;
+  background-size: contain !important;
+  background-position: center center !important;
+}
+.proj-item {
+  width: 33%;
+  height: 230px;
+  float: left;
+  background: transparent;
+
+  padding: 15px;
+}
+
+.proj-item h6 {
+  color: #111;
+  font-weight: bold;
+}
+.prod-info-sm {
+  height: 150px;
+}
+.proj-item .left {
+  width: 30%;
+  height: 200px;
+}
+.proj-item .left div {
+  width: 100%;
+  height: 100px;
+  background-size: contain !important;
+  background-position: center center !important;
+}
+.proj-item .right {
+  width: 70%;
+  height: 200px;
+  padding-left: 10px;
+}
+.pricing_wrapper {
+  height: 150px;
+}
+.pricing_wrapper .left {
+  width: 50%;
+  height: 100px;
+  background: gray;
+}
+.pricing_wrapper .right {
+  width: 50%;
+  height: 100px;
+}
+.ad1 {
+  background: url("../resources/images/layout/frontAd1.png") no-repeat;
+  background-size: cover !important;
+  height: 100px;
+  width: 100%;
+}
+.ad2 {
+  background: url("../resources/images/layout/frontAd2.png") no-repeat;
+  background-size: cover !important;
+  height: 100px;
+  width: 100%;
+}
+.content {
+  width: 65%;
+  float: left;
+}
+.sidebar {
+  width: 35%;
+  float: right;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+#front_ads {
+  height: 100px;
+}
+section {
+  clear: left;
+}
+#frontProducts {
+  height: 330px;
+}
+.page_content h1,
+.page_content h2,
+.page_content h3,
+.page_content h4,
+.page_content p {
+  color: #111;
+}
+#div1 {
+  background-color: blue;
+  width: 400px;
+  height: 200px;
+  margin: 30px;
+  padding: 20px;
+  color: white;
+}
+#div2 {
+  background-color: orange;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+}
+#div3 {
+  background-color: green;
+  width: 200px;
+  height: 40px;
+  padding: 20px;
+}
+footer {
+  clear: left;
+  height: 160px;
+  background: #333;
+  padding: 20px 0;
+}
+.section_wrapper {
+  clear: left;
+  min-height: 200px;
+  padding: 0px 20px;
+}
+
+#cartListwrapper,
+#productListwrapper,
+#viewproductwrapper,
+#pagewrapper {
+  background: #fff url("../resources/images/layout/wrapper.png") repeat-x;
+  min-height: 300px;
+  color: #111;
+  padding: 30px;
+}
+.book {
+  background: #fff;
+}
+.book-details {
+  margin-left: 30px;
+}
+/*  desktop*/
+@media screen and (min-width: 980px) and (max-width: 1024px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+/*small desktop*/
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .container {
+    width: 820px;
+    padding: 15px;
+  }
+  .top_navigation {
+    float: right;
+    width: 450px;
+    height: 150px;
+  }
+  #srchForm {
+    background: url("../resources/images/layout/srchform_med.png") no-repeat
+      left top;
+    width: 250px;
+    height: 40px;
+    padding: 10px 5px;
+    float: right;
+  }
+  #srchForm #srchText {
+    color: red;
+    background: url("../resources/images/layout/srchText_med.png");
+    width: 200px;
+    height: 30px;
+    text-indent: 10px;
+    border: none;
+  }
+  #srchForm #srchText {
+    color: red;
+    background: url("../resources/images/layout/srchText_med.png");
+    width: 130px;
+    height: 30px;
+    text-indent: 10px;
+    border: none;
+  }
+  .srchFont {
+    font-size: 15px;
+  }
+  nav ul li a {
+    font-size: 11px;
+  }
+}
+/*tablet*/
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .container {
+    width: 98%;
+    margin: 0;
+    padding: 0px;
+  }
+  .top_navigation {
+    float: right;
+    width: 70%;
+    height: 150px;
+  }
+  .logo {
+    display: block;
+    background: url("../resources/images/layout/logo_med.png") no-repeat;
+    width: 220px;
+    height: 140px;
+    margin-left: 5px;
+  }
+  .logoDiv {
+    float: left;
+    width: 30%;
+    height: 120px;
+  }
+  #currencyForm {
+    display: none;
+  }
+  #srchForm {
+    background: url("../resources/images/layout/srchform_med.png") no-repeat
+      left top;
+    width: 240px;
+    height: 40px;
+    padding: 10px 5px;
+    float: right;
+  }
+  #srchForm #srchText {
+    color: red;
+    background: url("../resources/images/layout/srchText_med.png");
+    width: 140px;
+    height: 30px;
+    text-indent: 10px;
+    border: none;
+  }
+  .srchFont {
+    font-size: 18px;
+  }
+  nav ul li a {
+    font-size: 11px;
+  }
+  .menu_mobile {
+    display: none;
+  }
+  .mobilenav_head {
+    display: none;
+  }
+}
+/*large phone / small tablet*/
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  header {
+    height: 180px;
+    padding-top: 5px;
+  }
+  .container {
+    width: 98%;
+    padding: 0;
+    background: black;
+  }
+  .logoDiv {
+    width: 150px;
+  }
+  .logo {
+    background: url("../resources/images/layout/logo_sml.png") no-repeat;
+    width: 150px;
+    height: 80px;
+    margin-left: 0px;
+  }
+  nav {
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  mobilenav {
+    display: block;
+  }
+  mobilenav {
+    clear: left;
+    background: #000;
+    width: 100%;
+  }
+  mobilenav ul li {
+    border-bottom: 1px solid #333;
+    float: none;
+    margin-top: 0px;
+    width: 100%;
+  }
+  mobilenav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  mobilenav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: url("../resources/images/layout/nav_hov.png") repeat-x;
+  }
+  #navSel {
+    text-decoration: none;
+    background: url("../resources/images/layout/nav_hov.png") repeat-x;
+  }
+  .mobilenav_head {
+    display: block;
+  }
+  .mobilenav_head a {
+    color: red;
+  }
+  .menu_mobile {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    z-index: 99;
+    background: url("../resources/images/layout/menu_mobile.png") no-repeat;
+    width: 50px;
+    height: 60px;
+    text-decoration: none;
+  }
+  nav {
+    clear: left;
+    background: #000;
+    width: 100%;
+  }
+  nav ul li {
+    border-bottom: 1px solid #333;
+    float: none;
+    margin-top: 0px;
+    width: 100%;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: url("../resources/images/layout/nav_hov.png") repeat-x;
+  }
+  .visible {
+    display: none;
+  }
+  #headnav1 {
+    display: none;
+  }
+  .top_navigation {
+    width: 120px;
+  }
+  .top_navigation div {
+    width: 120px;
+  }
+  #headnav2 {
+    display: none;
+  }
+
+  #currencyForm {
+    display: none;
+  }
+  .shopcart {
+    background: url("../resources/images/layout/cartMobile.png") no-repeat top
+      left;
+    width: 300px;
+  }
+
+  #srchForm {
+    display: block;
+    background: url("../resources/images/layout/srchform_med.png") no-repeat
+      right top;
+    margin-top: 60px;
+  }
+  #srchForm #srchText {
+    width: 150px;
+    height: 20px;
+  }
+  .srchFont {
+    font-size: 14px;
+  }
+  .content,
+  .sidebar {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .page_content {
+    padding: 0;
+  }
+  .page_content h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  #featured_products {
+    padding: 25px;
+  }
+}
+/*small phone*/
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .banner {
+    display: none;
+  }
+  .logo {
+    background: url("../resources/images/layout/logo_xsml.png") no-repeat;
+    width: 120px;
+    height: 60px;
+    margin-left: 0px;
+  }
+  #currencyForm {
+    display: none;
+  }
+  .top_navigation {
+    width: 100px;
+  }
+  .top_navigation div {
+    width: 100px;
+  }
+  .logoDiv {
+    width: 120px;
+  }
+  .shopcart {
+    background: url("../resources/images/layout/cartMobile.png") no-repeat top
+      left;
+  }
+  nav {
+    display: block;
+  }
+  ul.topnav2 {
+    margin-left: 0;
+  }
+  ul.topnav2 {
+    display: none;
+  }
+
+  .visible {
+    display: none;
+  }
+  .menu_mobile {
+    display: block;
+  }
+}
