@@ -27,22 +27,24 @@ class Listing extends Component {
     const { products, auth } = this.props;
     // const { isAuthenticated } = this.state;
     return (
-      <div className="container">
-        <div className="page_content">
-          <div className="row">
-            <div className="col-md-12 product-wrapper">
-              {products && products.length > 0 ? (
-                <ul>
-                  {products.map(product => (
-                    <Product key={product.id} product={product} />
-                  ))}
-                </ul>
-              ) : (
-                <div className="item">
-                  <p>No current products</p>
-                </div>
-              )}
-            </div>
+      <div id="productListwrapper">
+        <a href="#" class="shopLinkBack">
+          &lt Shop Products
+        </a>
+        <h3 class="fontRed">Guitars</h3>
+        <div className="row">
+          <div className="col-md-12 product-wrapper">
+            {products && products.length > 0 ? (
+              <ul>
+                {products.map(product => (
+                  <Product key={product.id} product={product} />
+                ))}
+              </ul>
+            ) : (
+              <div className="item">
+                <p>No current products</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

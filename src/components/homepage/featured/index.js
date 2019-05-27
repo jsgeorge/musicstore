@@ -3,8 +3,8 @@ import Carousel from "./carousel";
 
 const Featured = () => {
   return (
-    <div className="featured-wrapper">
-      <div
+    <div className="banner">
+      {/* <div
         className="jumbotron"
         style={{
           height: `${window.innerHeight}px`,
@@ -14,7 +14,8 @@ const Featured = () => {
         <div className="container">
           <div className="jumboText" />
         </div>
-      </div>
+      </div> */}
+      {/* <img src={"resources/images/banner/img2.png"} alt="banner" /> */}
     </div>
   );
 };

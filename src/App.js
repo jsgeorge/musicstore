@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="container">
           <Header />
 
           <div>

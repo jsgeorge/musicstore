@@ -10,7 +10,7 @@ class Product extends Component {
     const { id, name, price, descS, image } = this.props.product;
     const renderCardImage = image => {
       if (image && image.length > 0) {
-        return image.url;
+        return image;
       } else {
         return "/images/image_not_availble.png";
       }

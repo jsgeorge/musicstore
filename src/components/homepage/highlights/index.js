@@ -10,7 +10,9 @@ class Highlights extends Component {
 
     return (
       <div className="section_wrapper highlight_wrapper">
-        <h3>FEATURED PRODUCTS</h3>
+        <h2>
+          FEATURED<span class="fontRed"> PRODUCTS</span>
+        </h2>
         {/* <div class="carousel slide" id="myCarousel">
           <div class="carousel-inner">
             <div class="item active">

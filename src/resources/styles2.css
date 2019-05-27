@@ -7,12 +7,13 @@ body {
   font-family: arial;
   color: white;
 }
+
 .container {
-  background: transparent;
   margin: 0px auto;
   width: 985px;
-  padding: 0 50px;
+  padding: 0;
 }
+
 header {
   padding-top: 20px;
   height: 165px;
@@ -207,9 +208,10 @@ mobilenav {
   height: 400px;
   clear: left;
 }
-.jumbotron {
+.banner {
   background: url("../resources/images/banner/img2.png") no-repeat;
   background-size: cover !important;
+  height: 400px;
 }
 .highlight_wrapper {
   height: 500px;
@@ -363,18 +365,23 @@ footer {
 .book-details {
   margin-left: 30px;
 }
+
 /*  desktop*/
 @media screen and (min-width: 980px) and (max-width: 1024px) {
   .container {
-    padding: 0 25px;
+    padding: 0 0px;
+    margin: 0 auto;
+    width: 920px;
   }
 }
 /*small desktop*/
 @media screen and (min-width: 768px) and (max-width: 980px) {
   .container {
-    width: 820px;
-    padding: 15px;
+    width: 900px;
+    padding: 0px;
+    margin: 0 auto;
   }
+
   .top_navigation {
     float: right;
     width: 450px;
@@ -414,26 +421,28 @@ footer {
 /*tablet*/
 @media screen and (min-width: 640px) and (max-width: 768px) {
   .container {
-    width: 98%;
-    margin: 0;
+    width: 768px;
+    margin: 0 auto;
     padding: 0px;
   }
+
   .top_navigation {
+    background: #333;
     float: right;
-    width: 70%;
+    width: 60%;
     height: 150px;
   }
   .logo {
     display: block;
     background: url("../resources/images/layout/logo_med.png") no-repeat;
     width: 220px;
-    height: 140px;
+    height: 150px;
     margin-left: 5px;
   }
   .logoDiv {
     float: left;
     width: 30%;
-    height: 120px;
+    height: 150px;
   }
   #currencyForm {
     display: none;
@@ -441,7 +450,7 @@ footer {
   #srchForm {
     background: url("../resources/images/layout/srchform_med.png") no-repeat
       left top;
-    width: 240px;
+    width: 300px;
     height: 40px;
     padding: 10px 5px;
     float: right;
@@ -466,18 +475,26 @@ footer {
   .mobilenav_head {
     display: none;
   }
+  .banner {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
 }
 /*large phone / small tablet*/
-@media screen and (min-width: 320px) and (max-width: 639px) {
+@media screen and (max-width: 639px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: black;
+  }
+
   header {
     height: 180px;
     padding-top: 5px;
   }
-  .container {
-    width: 98%;
-    padding: 0;
-    background: black;
-  }
+
   .logoDiv {
     width: 150px;
   }
@@ -625,11 +642,17 @@ footer {
 }
 /*small phone*/
 @media screen and (max-width: 320px) {
+  .banner {
+  }
+}
+/* @media screen and (max-width: 320px) {
   .container {
     width: 100%;
     margin: 0;
     padding: 0;
+    background: #111;
   }
+
   .banner {
     display: none;
   }
@@ -671,4 +694,4 @@ footer {
   .menu_mobile {
     display: block;
   }
-}
+} */

@@ -14,9 +14,9 @@ class HomePage extends Component {
     if (auth.uid) return <Redirect to="/projects" />;
 
     return (
-      <div className="container">
+      <div className="homePageWrapper">
+        <Featured />
         <div className="page_content">
-          <Featured />
           <Pricing />
           <Highlights />
         </div>

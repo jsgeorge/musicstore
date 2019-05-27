@@ -29,7 +29,7 @@ class Header2 extends Component {
     const { isAuthenticated } = this.state;
 
     return (
-      <div className="container">
+      <div>
         <header>
           <div class="logoDiv">
             <Link to="/" class="logo" />
