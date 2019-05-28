@@ -19,6 +19,7 @@ class HomePage extends Component {
         <div className="page_content">
           <Pricing />
           <Highlights />
+          <div className="clear-left" />
         </div>
       </div>
     );

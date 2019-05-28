@@ -15,6 +15,7 @@ import Detail from "./components/posts/detail";
 import EditProject from "./components/posts/edit";
 import User from "./components/user";
 import Footer from "./components/layout/footer";
+import Faq from "./components/pages/faq";
 
 class App extends Component {
   render() {
@@ -28,12 +29,17 @@ class App extends Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
-              <Route exact path="/products/:category/" component={Listing} />
+              <Route
+                exact
+                path="/products/:id/:category/"
+                component={Listing}
+              />
               <Route exact path="/projects/add" component={AddProject} />
               <Route exact path="/projects/:id" component={Detail} />
               <Route exact path="/projects/:id/edit" component={EditProject} />
               <Route exact path="/settings" component={Settings} />
               <Route exact path="/user" component={User} />
+              <Route exapt path="/pages/faq" component={Faq} />
             </Switch>
           </div>
           <Footer />

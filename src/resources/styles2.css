@@ -13,6 +13,7 @@ body {
   width: 985px;
   padding: 0;
 }
+/* Header & Navigation*/
 
 header {
   padding-top: 20px;
@@ -175,9 +176,10 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-weight: bold;
-  color: white;
+  color: #ccc;
   font-size: 14px;
   padding: 20px;
+  text-transform: uppercase;
 }
 nav ul li a:hover {
   color: #fff;
@@ -189,53 +191,98 @@ nav ul li a:hover {
   text-decoration: none;
   background: url("../resources/images/layout/nav_hov.png") repeat-x;
 }
-.menu_mobile {
+/* .menu_mobile {
   display: none;
 }
 .mobilenav_head {
   display: none;
-}
-mobilenav {
+} */
+.mobilenav {
   display: none;
 }
+/* Content */
 .page_content {
   clear: left;
-  background: #fff url("../resources/images/layout/wrapper.png") repeat-x;
+  min-height: 300px;
+  background: #fff url("../resources/images/layout/page-bkd.png") repeat-x;
+}
+.page_header {
+  padding: 15px;
+}
+/*Home page*/
 
-  min-height: 400px;
-}
-.baner {
-  height: 400px;
-  clear: left;
-}
 .banner {
   background: url("../resources/images/banner/img2.png") no-repeat;
   background-size: cover !important;
   height: 400px;
+  clear: left;
 }
 .highlight_wrapper {
-  height: 500px;
+  padding-top: 15px;
+}
+.pricing_wrapper {
+  height: 150px;
+  padding-top: 20px;
+}
+.pricing_wrapper .left {
+  width: 70%;
+  height: 100px;
+  background: gray;
+}
+.pricing_wrapper .right {
+  width: 30%;
+  height: 100px;
+}
+#front_ads {
+  height: 100px;
+}
+
+#frontProducts {
+  height: 330px;
+}
+.page_content h1,
+.page_content h2,
+.page_content h3,
+.page_content h4,
+.page_content p {
+  color: #111;
+}
+.ad1 {
+  background: url("../resources/images/layout/frontAd1.png") no-repeat;
+  background-size: cover !important;
+  height: 100px;
+  width: 100%;
+}
+.ad2 {
+  background: url("../resources/images/layout/frontAd2.png") no-repeat;
+  background-size: cover !important;
+  height: 100px;
+  width: 100%;
 }
 .product-wrapper {
-  padding: 30px;
+  padding-top: 30px;
 }
 .proj-item-feat {
-  width: 25%;
-  height: 250px;
+  width: 20%;
+  height: 400px;
   float: left;
   background: transparent;
-
-  padding: 15px;
+  margin: 0 20px;
 }
-.proj-item-feat div {
+.proj-item-feat .prod-image,
+.proj-item .prod-image {
   width: 100%;
   height: 200px;
   background-size: contain !important;
   background-position: center center !important;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
 }
+
+/*Products*/
 .proj-item {
   width: 33%;
-  height: 230px;
+  height: 400px;
   float: left;
   background: transparent;
 
@@ -247,7 +294,7 @@ mobilenav {
   font-weight: bold;
 }
 .prod-info-sm {
-  height: 150px;
+  height: 100px;
 }
 .proj-item .left {
   width: 30%;
@@ -264,29 +311,9 @@ mobilenav {
   height: 200px;
   padding-left: 10px;
 }
-.pricing_wrapper {
-  height: 150px;
-}
-.pricing_wrapper .left {
-  width: 50%;
-  height: 100px;
-  background: gray;
-}
-.pricing_wrapper .right {
-  width: 50%;
-  height: 100px;
-}
-.ad1 {
-  background: url("../resources/images/layout/frontAd1.png") no-repeat;
-  background-size: cover !important;
-  height: 100px;
-  width: 100%;
-}
-.ad2 {
-  background: url("../resources/images/layout/frontAd2.png") no-repeat;
-  background-size: cover !important;
-  height: 100px;
-  width: 100%;
+/* Misc */
+section {
+  clear: left;
 }
 .content {
   width: 65%;
@@ -302,22 +329,7 @@ mobilenav {
 .right {
   float: right;
 }
-#front_ads {
-  height: 100px;
-}
-section {
-  clear: left;
-}
-#frontProducts {
-  height: 330px;
-}
-.page_content h1,
-.page_content h2,
-.page_content h3,
-.page_content h4,
-.page_content p {
-  color: #111;
-}
+
 #div1 {
   background-color: blue;
   width: 400px;
@@ -338,12 +350,7 @@ section {
   height: 40px;
   padding: 20px;
 }
-footer {
-  clear: left;
-  height: 160px;
-  background: #333;
-  padding: 20px 0;
-}
+
 .section_wrapper {
   clear: left;
   min-height: 200px;
@@ -359,19 +366,25 @@ footer {
   color: #111;
   padding: 30px;
 }
-.book {
-  background: #fff;
+.clear-left {
+  clear: left;
 }
-.book-details {
-  margin-left: 30px;
+/*footer*/
+footer {
+  clear: left;
+  height: 160px;
+  background: #333;
+  padding: 20px 0;
 }
-
 /*  desktop*/
 @media screen and (min-width: 980px) and (max-width: 1024px) {
   .container {
     padding: 0 0px;
     margin: 0 auto;
     width: 920px;
+  }
+  .banner {
+    height: 300px;
   }
 }
 /*small desktop*/
@@ -419,7 +432,7 @@ footer {
   }
 }
 /*tablet*/
-@media screen and (min-width: 640px) and (max-width: 768px) {
+/* @media screen and (min-width: 640px) and (max-width: 768px) {
   .container {
     width: 768px;
     margin: 0 auto;
@@ -427,9 +440,8 @@ footer {
   }
 
   .top_navigation {
-    background: #333;
     float: right;
-    width: 60%;
+    width: 70%;
     height: 150px;
   }
   .logo {
@@ -476,18 +488,18 @@ footer {
     display: none;
   }
   .banner {
-    width: 100px;
-    height: auto;
-    display: block;
+    height: 200px;
   }
-}
+} */
 /*large phone / small tablet*/
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 768px) {
+  body {
+    background: #111;
+  }
   .container {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: black;
   }
 
   header {
@@ -513,21 +525,26 @@ footer {
     padding: 0;
     width: 100%;
   }
-  mobilenav {
+  .mobilenav {
     display: block;
   }
-  mobilenav {
+  ul.topnav2 li a {
+    color: #fff;
+  }
+  .mobilenav {
     clear: left;
     background: #000;
     width: 100%;
   }
-  mobilenav ul li {
+  .mobilenav ul li,
+  .mobilecatgry ul li {
     border-bottom: 1px solid #333;
     float: none;
     margin-top: 0px;
     width: 100%;
   }
-  mobilenav ul li a {
+  .mobilenav ul li a,
+  .mobilecatgry ul li a {
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -535,31 +552,44 @@ footer {
     font-size: 14px;
     padding: 10px 20px;
   }
-  mobilenav ul li a:hover {
+  ul li button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    padding: 0px;
+  }
+  .mobilenav ul li a:hover,
+  .mobilecatgry ul li a:hover {
     color: #fff;
     text-decoration: none;
     background: url("../resources/images/layout/nav_hov.png") repeat-x;
+  }
+  nav {
+    display: none;
   }
   #navSel {
     text-decoration: none;
     background: url("../resources/images/layout/nav_hov.png") repeat-x;
   }
-  .mobilenav_head {
-    display: block;
-  }
-  .mobilenav_head a {
+
+  .mobilenav_head a,
+  .shopLink button {
     color: red;
   }
-  .menu_mobile {
-    display: block;
+  .shopLnk button:hover {
+    color: #fff;
+  }
+  .btn_menu_mobile {
     position: relative;
-    top: 0px;
+    top: 40px;
     left: 50%;
     z-index: 99;
     background: url("../resources/images/layout/menu_mobile.png") no-repeat;
     width: 50px;
     height: 60px;
     text-decoration: none;
+    border: none;
   }
   nav {
     clear: left;
@@ -577,7 +607,7 @@ footer {
     font-weight: bold;
     color: white;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 20px;
   }
   nav ul li a:hover {
@@ -623,6 +653,9 @@ footer {
   .srchFont {
     font-size: 14px;
   }
+  .banner {
+    height: 200px;
+  }
   .content,
   .sidebar {
     width: 100%;
@@ -631,6 +664,19 @@ footer {
   }
   .page_content {
     padding: 0;
+  }
+  .pricing_wrapper .left,
+  .pricing_wrapper .right {
+    width: 100%;
+    float: none;
+    clear: left;
+    height: 100px;
+  }
+  .proj-item-feat,
+  .proj-item {
+    width: 100%;
+    float: none;
+    text-align: center;
   }
   .page_content h2 {
     font-size: 18px;
@@ -641,10 +687,7 @@ footer {
   }
 }
 /*small phone*/
-@media screen and (max-width: 320px) {
-  .banner {
-  }
-}
+
 /* @media screen and (max-width: 320px) {
   .container {
     width: 100%;

@@ -18,11 +18,11 @@ class ProductFeatured extends Component {
     return (
       <li className="proj-item-feat">
         <div
+          className="prod-image"
           style={{
-            background: `url(${renderCardImage(image)}) no-repeat`
+            background: `#fff url(${renderCardImage(image)}) no-repeat`
           }}
         />
-
         <div className="prod-info-sm">
           <Link to={`products/${id}`}>
             <h6>{name}</h6>
@@ -30,9 +30,9 @@ class ProductFeatured extends Component {
           <p>{descS}</p>
           <p> ${price}</p>
         </div>
-        <p>
+        <div className="item-cmds">
           <button className="btn btn-danger bt-sm">Add to cart</button>
-        </p>
+        </div>
       </li>
     );
   }

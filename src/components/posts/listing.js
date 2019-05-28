@@ -6,7 +6,6 @@ import { firestoreConnect } from "react-redux-firebase";
 //import PropTypes from "prop-types";
 import Product from "./post";
 //import { getproducts } from "../../actions/productActions";
-
 import Notifications from "./categories";
 //import HomePage from "../homepage";
 
@@ -25,13 +24,18 @@ class Listing extends Component {
   // }
   render() {
     const { products, auth } = this.props;
+    const { categoryName } = this.props.match.params.category;
     // const { isAuthenticated } = this.state;
     return (
-      <div id="productListwrapper">
-        <a href="#" class="shopLinkBack">
-          &lt Shop Products
-        </a>
-        <h3 class="fontRed">Guitars</h3>
+      <div className="page_content">
+        <div className="page_header">
+          {/* <a href="#" class="shopLinkBack">
+            &lt Shop Products
+          </a> */}
+          <h3 class="fontRed">
+            {this.props.match.params.id} {this.props.match.params.category}
+          </h3>
+        </div>
         <div className="row">
           <div className="col-md-12 product-wrapper">
             {products && products.length > 0 ? (
@@ -64,7 +68,6 @@ class Listing extends Component {
 // )(Listing);
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     products: state.firestore.ordered.products,
     auth: state.firebase.auth
@@ -72,5 +75,10 @@ const mapStateToProps = state => {
 };
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "products" }])
+  firestoreConnect(props => [
+    {
+      collection: "products",
+      where: [["category", "==", 1]]
+    }
+  ])
 )(Listing);

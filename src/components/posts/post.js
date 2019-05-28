@@ -16,8 +16,9 @@ class Product extends Component {
       }
     };
     return (
-      <li className=" proj-item-feat">
+      <li className="proj-item">
         <div
+          className="prod-image"
           style={{
             background: `url(${renderCardImage(image)}) no-repeat`
           }}

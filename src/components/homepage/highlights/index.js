@@ -9,11 +9,12 @@ class Highlights extends Component {
     const { products, auth } = this.props;
 
     return (
-      <div className="section_wrapper highlight_wrapper">
-        <h2>
-          FEATURED<span class="fontRed"> PRODUCTS</span>
-        </h2>
-        {/* <div class="carousel slide" id="myCarousel">
+      <div className="section_wrapper">
+        <div clasName="highlight_wrapper">
+          <h2>
+            FEATURED<span class="fontRed"> PRODUCTS</span>
+          </h2>
+          {/* <div class="carousel slide" id="myCarousel">
           <div class="carousel-inner">
             <div class="item active">
               <ul class="thumbnails">
@@ -79,18 +80,19 @@ class Highlights extends Component {
             </a>
           </div> 
         </div>*/}
-        <div className="col-md-12 product-wrapper-featured">
-          {products && products.length > 0 ? (
-            <ul>
-              {products.map(product => (
-                <ProductFeatured key={product.id} product={product} />
-              ))}
-            </ul>
-          ) : (
-            <div className="item">
-              <p>No current products</p>
-            </div>
-          )}
+          <div className="col-md-12 product-wrapper-featured">
+            {products && products.length > 0 ? (
+              <ul>
+                {products.map(product => (
+                  <ProductFeatured key={product.id} product={product} />
+                ))}
+              </ul>
+            ) : (
+              <div className="item">
+                <p>No current products</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -106,5 +108,10 @@ const mapStateToProps = state => {
 };
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "products" }])
+  firestoreConnect([
+    {
+      collection: "products",
+      where: [["featured", "==", true]]
+    }
+  ])
 )(Highlights);
