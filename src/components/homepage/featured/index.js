@@ -5,17 +5,19 @@ const Featured = () => {
   return (
     <div className="banner">
       {/* <div
-        className="jumbotron"
-        style={{
-          height: `${window.innerHeight}px`,
-          overflow: "hidden"
-        }}
-      >
-        <div className="container">
-          <div className="jumboText" />
-        </div>
-      </div> */}
+    //     className="jumbotron"
+    //     style={{
+    //       height: `${window.innerHeight}px`,
+    //       overflow: "hidden"
+    //     }}
+    //   >
+    //     <div className="container">
+    //       <div className="jumboText" />
+    //     </div>
+    //   </div> */}
       {/* <img src={"resources/images/banner/img2.png"} alt="banner" /> */}
+
+      <Carousel />
     </div>
   );
 };

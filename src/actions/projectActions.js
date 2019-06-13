@@ -6,6 +6,30 @@
 //     });
 //   };
 // };
+export const AddToCart = product => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    //make async call to database
+    const firebase = getFirebase();
+    const firestore = getFirestore();
+    const userid = getState().firebase.auth.uid;
+    console.log(userid);
+    const profile = getState().firebase.profile;
+    firestore
+      .collection("users")
+      .doc(userid)
+      .collection("cart")
+      .add({
+        ...product,
+        qty: 1
+      })
+      .then(() => {
+        dispatch({ type: "ADD_TO_CART", product });
+      })
+      .catch(err => {
+        dispatch({ type: "ADD_TO_CART_ERROR", err });
+      });
+  };
+};
 export const CreateProject = project => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     //make async call to database

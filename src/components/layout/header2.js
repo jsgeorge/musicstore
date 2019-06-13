@@ -1,30 +1,40 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 
 import { firestoreConnect } from "react-redux-firebase";
 // import PropTypes from "prop-types";
 import { compose } from "redux";
 import { connect } from "react-redux";
 //import { DisplayUser } from "./displayuser";
-//import { UserLogout } from "../../actions/authActions";
+import { UserLogout } from "../../actions/authActions";
 // import Navbar from "./navbar";
 // import Navbar2 from "./navbar2";
+import ShoppingCart from "./shoppingcart";
 class Header2 extends Component {
   state = {
     isAuthenticated: false,
     mobileMnuOpen: false,
     mobileCategoriesOpen: false
   };
-  onClickMobileMenu = () => {
+  onClickBtnMobileMenu = () => {
     this.setState({ mobileMnuOpen: !this.state.mobileMnuOpen });
   };
   onClickCtgryMenu = () => {
     this.setState({ mobileCategoriesOpen: !this.state.mobileCategoriesOpen });
     this.setState({ mobileMnuOpen: false });
   };
+  onClickMobileLink = linkTo => {
+    this.setState({ mobileCategoriesOpen: false });
+    this.setState({ mobileMnuOpen: false });
+    this.props.history.push(linkTo);
+  };
   onReturnToMenu = () => {
     this.setState({ mobileCategoriesOpen: false });
     this.setState({ mobileMnuOpen: true });
+  };
+  onLogout = () => {
+    this.props.UserLogout();
+    window.location.href = `/`;
   };
   static getDerivedStateFromProps(props, state) {
     const { auth } = props;
@@ -52,14 +62,23 @@ class Header2 extends Component {
                 <li>
                   <Link to="/">Home</Link>
                 </li>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
+                {!auth.uid ? (
+                  <span>
+                    <li>
+                      <Link to="/login">Login</Link>
+                    </li>
+                  </span>
+                ) : (
+                  <li style={{ color: "red" }}>
+                    {profile.firstname} {profile.lastname}
+                    <button onClick={() => this.onLogout()}>Logout</button>
+                  </li>
+                )}
               </ul>
               <form id="currencyForm">
                 Currencies{" "}
                 <select className="cboCurrencies">
-                  <option value="0" selected>
+                  <option value="0" defaultValue>
                     US Dollar
                   </option>
                   <option value="1">EURO</option>
@@ -69,13 +88,7 @@ class Header2 extends Component {
                 <button className="btnCur">En</button>
               </form>
             </div>
-            <div className="shopcart">
-              <Link to="/cart" className="cartlink">
-                <span className="visible">SHOPPING CART:</span>
-              </Link>{" "}
-              0 items
-              <Link to="/cart" className="btnShowCart" />
-            </div>
+            <ShoppingCart />
             <div id="headnav2">
               <ul className="topnav2">
                 <li>
@@ -84,27 +97,27 @@ class Header2 extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/new-products" id="newProducts">
+                  <Link to="/pages/new" id="newProducts">
                     New Products
                   </Link>
                 </li>
                 <li>
-                  <Link to="/specials" id="specials">
+                  <Link to="/pages/specials" id="specials">
                     Specials
                   </Link>
                 </li>
                 <li>
-                  <Link to="/page" id="about">
+                  <Link to="/pages/allproducts" id="about">
                     All Products
                   </Link>
                 </li>
                 <li>
-                  <Link to="/reviews" id="reviews">
+                  <Link to="/pages/pagemodel" id="reviews">
                     Reviews
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" id="contact">
+                  <Link to="/pages/pagemodel" id="contact">
                     Contacts
                   </Link>
                 </li>
@@ -116,7 +129,7 @@ class Header2 extends Component {
               </ul>
             </div>
 
-            <div>
+            <div className="srchPanel">
               <form id="srchForm">
                 <span className="srchFont">SEARCH</span>
                 <input
@@ -129,7 +142,7 @@ class Header2 extends Component {
             </div>
           </div>
           <button
-            onClick={() => this.onClickMobileMenu()}
+            onClick={() => this.onClickBtnMobileMenu()}
             className="btn_menu_mobile"
           />
         </header>
@@ -139,7 +152,7 @@ class Header2 extends Component {
               {categories.map(category => (
                 <li key={category.id}>
                   <Link to={`/products/${category.id}/${category.name}`}>
-                    {category.id} {category.name}
+                    {category.name}
                   </Link>
                 </li>
               ))}
@@ -151,40 +164,44 @@ class Header2 extends Component {
           <div className="mobilenav">
             <ul>
               <li>
-                <Link to="/" id="home">
+                <button onClick={() => this.onClickMobileLink("/")}>
                   Home
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/" className="shopStore">
-                  <button onClick={() => this.onClickCtgryMenu()}>
-                    Shop Our Store
-                  </button>
-                </Link>
+                <button onClick={() => this.onClickCtgryMenu()}>
+                  Shop Our Store
+                </button>
               </li>
 
               <li>
-                <Link to="/new-products" id="newProducts">
+                <button
+                  onClick={() => this.onClickMobileLink("/pages/newproducts")}
+                >
                   New Products
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/specials" id="specials">
+                <button
+                  onClick={() => this.onClickMobileLink("/pages/specials")}
+                >
                   Specials
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/page" id="about">
+                <button
+                  onClick={() => this.onClickMobileLink("/pages/allproducts")}
+                >
                   All Products
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/reviews" id="reviews">
+                <Link to="/pages/pagemodel" id="reviews">
                   Reviews
                 </Link>
               </li>
               <li>
-                <Link to="/contact" id="contact">
+                <Link to="/pages/pagemodel" id="contact">
                   Contacts
                 </Link>
               </li>
@@ -193,6 +210,23 @@ class Header2 extends Component {
                   FAQ
                 </Link>
               </li>
+              <li />
+              {!auth.uid ? (
+                <span>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                </span>
+              ) : (
+                <li>
+                  <button onClick={() => this.onLogout()}>
+                    <span style={{ color: "red" }}>
+                      {profile.firstname} {profile.lastname}
+                    </span>
+                    Logout
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         ) : null}
@@ -211,9 +245,15 @@ class Header2 extends Component {
                 <ul>
                   {categories.map(category => (
                     <li key={category.id}>
-                      <Link to={`/products/${category.id}/${category.name}`}>
+                      <button
+                        onClick={() =>
+                          this.onClickMobileLink(
+                            `/products/${category.id}/${category.name}`
+                          )
+                        }
+                      >
                         {category.name}
-                      </Link>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -233,13 +273,20 @@ const mapStateToProps = state => {
     categories: state.firestore.ordered.categories2
   };
 };
-
+const mapDispatchToProps = dispatch => {
+  return {
+    UserLogout: () => dispatch(UserLogout())
+  };
+};
 export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  firestoreConnect(props => [
     {
       collection: "categories2"
     }
   ])
-)(Header2);
+)(withRouter(Header2));
 //export default Header;

@@ -7,18 +7,21 @@ import VenueInfo from "./venueInfo";
 import Highlights from "./highlights";
 import Pricing from "./pricing";
 import Ads from "./ads";
+import NewProducts from "./newproducts";
+import PopularProducts from "./popularproducts";
 
 class HomePage extends Component {
   render() {
     const { auth } = this.props;
-    if (auth.uid) return <Redirect to="/projects" />;
 
     return (
-      <div className="homePageWrapper">
-        <Featured />
+      <div className="homePageWrapper margin-top">
         <div className="page_content">
+          <Featured />
           <Pricing />
           <Highlights />
+          {/* <NewProducts /> */}
+          {/* <PopularProducts /> */}
           <div className="clear-left" />
         </div>
       </div>

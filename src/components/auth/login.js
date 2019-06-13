@@ -33,7 +33,8 @@ class Login extends Component {
     //     this.props.notifyUser("Invalid Username/Password", "error")
     //   );
     this.props.UserLogin(this.state);
-    this.props.history.push("/projects");
+
+    //this.props.history.push("/");
   };
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -42,43 +43,47 @@ class Login extends Component {
     const { email, password } = this.state;
     //const { message, messageType } = this.props.notify;
     const { authError, auth } = this.props;
-    if (auth.uid) return <Redirect to="/" />;
+     if (auth.uid) return <Redirect to="/" />;
 
     return (
       <div className="container margin-top">
-        <div className="row">
-          <div className="col-md-6 offset-md-3 ">
-            <div className="card">
-              <div className="card-header">
-                <h4 className="text-center appFont2">
-                  <i className="fas fa-lock appFont" /> Login
-                </h4>
-              </div>
-              <div className="card-body">
-                {authError ? <Alert message={authError} type="error" /> : null}
-                <form onSubmit={this.onSubmit}>
-                  <TextInputGroup
-                    label="Email"
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    //error={errors.name}
-                  />
-                  <TextInputGroup
-                    label="Password"
-                    name="password"
-                    type="password"
-                    value={password}
-                    onChange={this.onChange}
-                    //error={errors.password}
-                  />
+        <div className="page_content">
+          <div className="row">
+            <div className="col-md-6 offset-md-3 ">
+              <div className="card">
+                <div className="card-header">
+                  <h4 className="text-center appFont2">
+                    <i className="fas fa-lock appFont" /> Login
+                  </h4>
+                </div>
+                <div className="card-body">
+                  {authError ? (
+                    <Alert message={authError} type="error" />
+                  ) : null}
+                  <form onSubmit={this.onSubmit}>
+                    <TextInputGroup
+                      label="Email"
+                      name="email"
+                      value={email}
+                      onChange={this.onChange}
+                      //error={errors.name}
+                    />
+                    <TextInputGroup
+                      label="Password"
+                      name="password"
+                      type="password"
+                      value={password}
+                      onChange={this.onChange}
+                      //error={errors.password}
+                    />
 
-                  <input
-                    type="submit"
-                    value="Login"
-                    className="btn btn-primary btn-block"
-                  />
-                </form>
+                    <input
+                      type="submit"
+                      value="Login"
+                      className="btn btn-danger btn-block"
+                    />
+                  </form>
+                </div>
               </div>
             </div>
           </div>

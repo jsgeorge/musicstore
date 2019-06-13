@@ -1,59 +1,59 @@
 import React from "react";
 import Slider from "react-slick";
-import slide1 from "../../../../src/resources/images/banner/img2.png";
+//import slide1 from "../../../../src/resources/images/banner/img2.png";
 //import slide1 from "../../../../src/resources/images/slide1.png";
 //import slide3 from "../../../../src/resources/images/slide1.png";
 //import slide4 from "../../../../src/resources/images/slide1.png";
-//import slide5 from "../../../../src/resources/images/concert_five.jpg";
-
+//import slide5 from "../../../src/resources/images/concert_five.jpg";
+import slide1 from "../../../resources/images/banner/banner1.png";
+import slide2 from "../../../resources/images/banner/banner2.png";
+import slide3 from "../../../resources/images/banner/banner3.png";
+import slide4 from "../../../resources/images/banner/banner4.png";
 const Carousel = () => {
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   autoplay: true,
-  //   speed: 500
-  // };
-
   return (
     <div
-      className="carrousel_wrapper"
-      style={{
-        background: "gray",
-        background: `url(${slide1})`,
-        height: `${window.innerHeight}px`,
-        overflow: "hidden"
-      }}
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
     >
-      {/* <Slider {...settings}>
-        <div>
-          <div
-            className="carrousel_image"
-            style={{
-              background: `url(${slide2})`,
-              height: `${window.innerHeight}px`
-            }}
-          />
-          <div>Image 1</div>
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        />
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" />
+        <li data-target="#carouselExampleIndicators" data-slide-to="2" />
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src={slide1} alt="First slide" />
         </div>
-        <div>
-          <div
-            className="carrousel_image"
-            style={{
-              background: `url(${slide4})`,
-              height: `${window.innerHeight}px`
-            }}
-          />
+        <div class="carousel-item">
+          <img class="d-block w-100" src={slide2} alt="Second slide" />
         </div>
-        <div>
-          <div
-            className="carrousel_image"
-            style={{
-              background: `url(${slide3})`,
-              height: `${window.innerHeight}px`
-            }}
-          />
+        <div class="carousel-item">
+          <img class="d-block w-100" src={slide3} alt="Third slide" />
         </div>
-      </Slider> */}
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true" />
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true" />
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   );
 };

@@ -13,6 +13,11 @@ const projReducer = (state = initState, action) => {
   switch (action.type) {
     // case "GET_PROJECTS":
     //   return state;
+    case "ADD_TO_CART":
+      return state;
+    case "ADD_TO_CART_ERROR":
+      console.log("error add to cart");
+      break;
     case "CREATE_PROJECT":
       return state;
     case "CREATE_PROJECT_ERROR":
